@@ -1,0 +1,12 @@
+{
+  "name": "ElectronDevhub",
+  "version": "1.0.0",
+  "description": "Electron で DevHub をラッピング",
+  "author": "Naoki Kodama",
+  "main": "app/javascripts/main/main.js",
+  "dependencies": {
+    "babel-register": "6.9.0"
+  }
+}
+
+
