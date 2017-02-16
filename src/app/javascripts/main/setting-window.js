@@ -1,6 +1,6 @@
 const {app, BrowserWindow, ipcMain} = require('electron');
 
-module.exports = class DevHubWindow {
+module.exports = class SettingWindow {
   constructor(){
     this.window = null;
     this.start();
@@ -11,8 +11,7 @@ module.exports = class DevHubWindow {
       this.createWindow();
     });
 
-    ipcMain.on('setUrl', (event,url) => {
-      this.window.loadURL(url);
+    app.on('showSetting', (url) => {
       this.window.show();
     });
   }
@@ -21,15 +20,11 @@ module.exports = class DevHubWindow {
     this.window = new BrowserWindow({
       x: 0,
       y: 0,
-      width: 1200,
-      height: 800,
-      show: false
+      width: 400,
+      height: 300,
+      show: true
     });
 
-    /*
-    this.window.loadURL(
-      'http://dev-hub.herokuapp.com/'
-    );
-    */
+    this.window.loadURL(`file://${__dirname}/../../html/setting.html`);
   }
 };

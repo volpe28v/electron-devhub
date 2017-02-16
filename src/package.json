@@ -5,8 +5,7 @@
   "author": "Naoki Kodama",
   "main": "app/javascripts/main/main.js",
   "dependencies": {
-    "babel-register": "6.9.0"
+    "babel-register": "6.9.0",
+    "knockout": "^3.4.1"
   }
 }
-
-
