@@ -12,8 +12,8 @@ module.exports = class DevHubWindow {
     });
 
     ipcMain.on('setUrl', (event,url) => {
-      this.window.loadURL(url);
       this.window.show();
+      this.window.loadURL(url);
     });
   }
 
@@ -23,13 +23,10 @@ module.exports = class DevHubWindow {
       y: 0,
       width: 1200,
       height: 800,
-      show: false
+      //show: false
     });
 
-    /*
-    this.window.loadURL(
-      'http://dev-hub.herokuapp.com/'
-    );
-    */
+    // 最初から show: false にすると、ブログリンクからウインドウが表示されないので hide() を使う
+    this.window.hide();
   }
 };

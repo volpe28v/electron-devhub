@@ -1,19 +1,21 @@
 const ko = require('knockout');
 const {ipcRenderer} = require('electron');
 
-class SampleViewModel {
+class SettingViewModel {
   constructor() {
-  	this.name = ko.observable();
+  	this.url = ko.observable();
+
+    // 初期表示
+    this.url('http://dev-hub.herokuapp.com/');
   }
 
-	showName() {
-		//alert(`こんにちは、${this.name()}さん`);
-    ipcRenderer.send("setUrl",'http://dev-hub.herokuapp.com/');
+	setUrl() {
+    ipcRenderer.send("setUrl", this.url());
 	}
 }
 
 window.onload = () => {
-	var vm = new SampleViewModel();
+	var vm = new SettingViewModel();
 	ko.applyBindings(vm);
 };
 
