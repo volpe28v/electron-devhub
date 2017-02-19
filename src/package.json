@@ -6,6 +6,7 @@
   "main": "app/javascripts/main/main.js",
   "dependencies": {
     "babel-register": "6.9.0",
+    "electron-json-storage": "^3.0.1",
     "knockout": "^3.4.1"
   }
 }
