@@ -15,6 +15,10 @@ class Main {
     app.on('ready', () => {
       AppMenu.setup();
     });
+
+    app.on("window-all-closed", function(){
+      app.quit();
+    });
   }
 }
 

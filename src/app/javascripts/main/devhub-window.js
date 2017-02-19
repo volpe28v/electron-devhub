@@ -26,6 +26,13 @@ module.exports = class DevHubWindow {
       //show: false
     });
 
+    this.window.on('close', (event) => {
+      if (this.window.isVisible()){
+        this.window.hide();
+        event.preventDefault();
+      }
+    });
+ 
     // 最初から show: false にすると、ブログリンクからウインドウが表示されないので hide() を使う
     this.window.hide();
   }
