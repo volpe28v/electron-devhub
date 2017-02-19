@@ -2,14 +2,23 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>DevHub</title>
-    <script src="./../javascripts/renderer/setting.js"></script>
+
+    <link rel="stylesheet" href="../css/photon.min.css">
   </head>
   <body>
-    <h1>DevHubのURLを入力</h1>
-    <hr/>
-    <span>URL：</span>
-    <input type="text" data-bind="value: url"></input>
-    <button data-bind="click: setUrl">OK</button>
+    <div class="window">
+      <div class="window-content">
+        <div>
+          <input class="form-control" type="text" data-bind="value: url"></input>
+        </div>
+      </div>
+      <footer class="toolbar toolbar-footer">
+        <div class="toolbar-actions">
+          <button class="btn btn-primary pull-right" data-bind="click: setUrl">Open DevHub</button>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./../javascripts/renderer/setting.js"></script>
   </body>
 </html>
