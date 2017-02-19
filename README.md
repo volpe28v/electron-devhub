@@ -13,3 +13,8 @@ $ npm install
 $ cd ..
 $ npm run start
 ```
+
+## Packaging
+```
+$ npm run pack
+```
