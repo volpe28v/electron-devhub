@@ -1,7 +1,5 @@
 node_modules
 src/node_modules
 *.swp
+dist
 
-src/devhub-darwin-x64/
-src/devhub-win32-x64.zip
-src/devhub-win32-x64/
